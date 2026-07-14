@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile with role",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin", "user"]
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": ["email", "role", "createdAt"]
+    },
+    "InventoryItem": {
+      "title": "Inventory Item",
+      "description": "An item in the inventory",
+      "type": "object",
+      "properties": {
+        "barcode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "stock": {
+          "type": "number"
+        },
+        "lastUpdated": {
+          "type": "string"
+        }
+      },
+      "required": ["barcode", "name", "category", "price", "stock", "lastUpdated"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/inventory/{itemId}": {
+      "schema": "InventoryItem",
+      "description": "Inventory items"
+    }
+  }
+}

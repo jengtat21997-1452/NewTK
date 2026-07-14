@@ -1,0 +1,10 @@
+{
+  "name": "TakanIT_Store",
+  "description": "ระบบจัดการคลังวัสดุและอุปกรณ์สำหรับร้านตระการไอที รองรับการสแกนบาร์โค้ด แจ้งเตือนของใกล้หมด และตรวจสอบวันหมดอายุ",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
